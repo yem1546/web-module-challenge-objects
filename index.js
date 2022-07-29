@@ -16,10 +16,14 @@ The function should:
 */
 
 
-function createMenuItem(/*Your code here*/){
-  /*Your code here*/
+function createMenuItem(itemName, itemPrice, itemCategory){
+  obj = {
+    name : itemName,
+    price : itemPrice,
+    category : itemCategory,
+  }
+  return obj
 }
-
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -51,7 +55,14 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
+  discount : function(str){
+    if (str === 'teacher' || str === 'student'){
+      return this.price * .75
+    }
+    else{
+      return this.price * 0.9
+    }
+  }
 }
 
 
@@ -80,7 +91,7 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays"
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -95,8 +106,13 @@ Use the addReview function below to do the following:
 */
 
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
+function addReview(array, myName, myRating, myFeedback){
+  array[array.length] = {
+    name: myName,
+    rating: myRating,
+    feedback: myFeedback,
+  }
+  return array
 }
 
 
