@@ -17,7 +17,7 @@ The function should:
 
 
 function createMenuItem(itemName, itemPrice, itemCategory){
-  obj = {
+  const obj = {
     name : itemName,
     price : itemPrice,
     category : itemCategory,
@@ -129,7 +129,7 @@ Use the getReviewByIndex function below to do the following:
 
 
 function getReviewByIndex(array, index) {
-  str = `${array[index].name} gave the restaurant a ${array[index].rating} star review, and their feedback was: ${array[index].feedback}`
+  const str = `${array[index].name} gave the restaurant a ${array[index].rating} star review, and their feedback was: ${array[index].feedback}`
   return str
 }
 
@@ -148,8 +148,8 @@ Use the getLastReview function below to do the following:
 
 
 function getLastReview(array) {
-  lastEntry = array[array.length - 1]
-  str = `${lastEntry.name} gave the restaurant a ${lastEntry.rating} star review, and their feedback was: ${lastEntry.feedback}`
+  const lastEntry = array[array.length - 1]
+  const str = `${lastEntry.name} gave the restaurant a ${lastEntry.rating} star review, and their feedback was: ${lastEntry.feedback}`
   return str
 }
 
